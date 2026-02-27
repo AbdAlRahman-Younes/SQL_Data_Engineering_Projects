@@ -2,7 +2,7 @@
 
 ![EDA Project Overview](../images/eda1_EDA.png)
 
-A SQL project analyzing the Western European Data Engineer job market using real-world job posting data collected between January 2023 and June 2025. It demonstrates my ability to **write production-quality analytical SQL, design efficient queries, and turn business questions into data-driven insights**.
+A SQL project analyzing the Western European Data Engineer job market using real-world job posting data. It demonstrates my ability to **write production-quality analytical SQL, design efficient queries, and turn business questions into data-driven insights**.
 
 ---
 
