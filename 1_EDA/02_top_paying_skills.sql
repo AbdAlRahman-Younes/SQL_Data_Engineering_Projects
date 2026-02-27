@@ -36,7 +36,7 @@ A noticeable salary band compression occurs around ~$147,500, suggesting standar
 
 Key takeaways:
 - Distributed database expertise commands the highest median salaries
-- NoSQL systems show stronger salary premiums than traditional cloud tools
+- NoSQL systems show stronger salary premiums than traditional relational DB management systems
 - Backend and API-layer technologies correlate with higher compensation
 - Cloud data platforms provide strong demand but similar salary bands
 - Western European compensation appears more banded than highly differentiated

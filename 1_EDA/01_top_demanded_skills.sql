@@ -1,11 +1,10 @@
 /*
 Question: What are the most in-demand skills for data engineers in western Europe?
 - Identifying the top 10 in-demand skills for data engineers.
-- Focusing on the top 5 biggest markets in western Europe.
+- Focusing on the biggest markets in western Europe.
 - Why? Retrieves the top 10 skills with the highest demand in the western Europian market,
     providing insights into the most valuable transferrable skills for growing data engineers.
 */
-explain analyze
 Select
     sd.skills as skill,
     count(jpf.job_id) as skill_demand
@@ -22,7 +21,7 @@ limit 10;
 
 /*
 Here's the breakdown of the most demanded skills for data engineers in Western Europe:
-Python and SQL clearly dominate the market, with just over 46,000 job postings each — significantly higher than all other skills, confirming their role as core foundational technologies.
+Python and SQL clearly dominate the market, with just over 57,000 job postings each — significantly higher than all other skills, confirming their role as core foundational technologies.
 Cloud platforms are heavily demanded, with Azure leading at just shy of 40,000 postings, followed by AWS at ~31,900.
 Apache Spark ranks fifth at ~25,000 postings, reinforcing the importance of distributed data processing and big data capabilities.
 Databricks, Java, and Scala appear prominently, highlighting the continued relevance of the JVM ecosystem and lakehouse architectures in European data stacks.

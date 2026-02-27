@@ -1,6 +1,6 @@
 # 🔍 Exploratory Data Analysis w/ SQL: Job Market Analytics
 
-![EDA Project Overview](../images/eda1_1.png)
+![EDA Project Overview](../images/eda1_EDA.png)
 
 A SQL project analyzing the Western European Data Engineer job market using real-world job posting data collected between January 2023 and June 2025. It demonstrates my ability to **write production-quality analytical SQL, design efficient queries, and turn business questions into data-driven insights**.
 
@@ -23,7 +23,7 @@ Key Queries:
 
 ## 🧩 Problem & Context
 
-Job market analysts need to answer questions like:
+The job market analysis answers:
 
 - 🎯 **Most in-demand:** *Which skills are most in-demand for data engineers?*  
 - 💰 **Highest paid:** *Which skills command the highest salaries?*  
@@ -102,5 +102,5 @@ By querying across these interconnected tables, I extracted insights about skill
 - **Grouping**: `GROUP BY` for categorical analysis by skill.
 - **Mathematical Functions**: `LN()` for natural logarithm transformation to normalize demand metrics.
 - **Calculated Metrics**: Derived optimal score combining log-transformed demand with median salary.
-- **HAVING Clause**: Filtering aggregated results (skills with >= 100 postings), **except** for the optimal-skills analysis.
+- **HAVING Clause**: Filtering aggregated results (skills with >= 100 postings) for the top-paying skills analysis.
 - **NULL Handling**: Conditional salary filtering and aggregation for compensation-based analysis in the optimal-skills query.
