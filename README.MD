@@ -1,6 +1,6 @@
 # SQL Data Engineering Projects
 
-The following projects are a collection of projectsw that I have worked on to practice and reinforce my skills w/ data engineering tools.
+The following projects are a collection of projects that I have worked on to practice and reinforce my skills w/ data engineering tools.
 
 > Click the project name below to view the tools I used to build these!
 
@@ -10,4 +10,4 @@ The following projects are a collection of projectsw that I have worked on to pr
 
 ![EDA Project Overview](images/eda1_EDA.png)
 
-SQL-driven analysis of data engineer job market trends in Europe using advanced querying techniques.
+SQL-driven analysis of data engineer job market trends in Western Europe using advanced querying techniques.
