@@ -1,3 +1,4 @@
+-- Step 1: DW - Create star schema tables (Data Warehouse)
 -- Drop existing tables if they exist (for idempotency)
 DROP TABLE IF EXISTS skills_job_dim;
 DROP TABLE IF EXISTS job_postings_fact;
@@ -9,9 +10,7 @@ CREATE TABLE company_dim
 (
     company_id   INT PRIMARY KEY,
     name         TEXT,
-    link         TEXT,
-    link_google  TEXT,
-    thumbnail    TEXT
+    link         TEXT
 );
 
 -- Create skills_dim table
