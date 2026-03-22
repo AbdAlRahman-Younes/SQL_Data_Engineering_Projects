@@ -1,5 +1,4 @@
 -- Step 2: DW - Load data from CSV files into star schema tables (Data Warehouse)
--- Run this after Step 1
 
 -- Load dimension tables first (no FK dependencies)
 Select '=== Loading comapany_dim Table ===';
