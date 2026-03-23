@@ -1,7 +1,10 @@
 -- Step 3: Mart - Create flat mart table (denormalized data warehouse)
 
+-- Drop existing flat mart schema if it exists (for idempotency)
+DROP SCHEMA IF EXISTS flat_mart CASCADE;
+
 -- Create the flat mart schema
-CREATE OR REPLACE SCHEMA flat_mart;
+CREATE SCHEMA flat_mart;
 
 SELECT '=== Loading flat_mart.job_postings Table ===' AS info;
 Create OR REPLACE TABLE flat_mart.job_postings AS

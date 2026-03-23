@@ -2,8 +2,12 @@
 Master build script for data warehouse and mart pipeline
 This file runs all steps in sequence to build the complete warehouse and marts
 This file expects running duckdb in the same folder as the build scripts, if not use absolute script/file paths before executing
-Run this script in CLI: duckdb dw_marts.duckdb -c ".read 00_build_dw_marts.sql"
-Feel free to change the .duckdb database name to your filename of choice
+Usage:
+    Local: Run this script in CLI with: duckdb dw_marts.duckdb -c ".read 00_build_dw_marts.sql"
+    Feel free to change the .duckdb database name to your filename of choice
+
+    MotherDuck: duckdb "md:dw_marts" -c ".read build_dw_marts.sql"
+    Note: Ensure MOTHERDUCK_TOKEN is already exported in your environment
 */
 
 -- Step 1: DW - Create star schema tables

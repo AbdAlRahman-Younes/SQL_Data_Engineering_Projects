@@ -1,7 +1,7 @@
 -- Step 2: DW - Load data from CSV files into star schema tables (Data Warehouse)
 
 -- Load dimension tables first (no FK dependencies)
-Select '=== Loading comapany_dim Table ===';
+Select '=== Loading comapany_dim Table ===' AS info;
 
 INSERT INTO company_dim (company_id, name, link)
 SELECT company_id, name, link
@@ -9,7 +9,7 @@ FROM read_csv('https://storage.googleapis.com/sql_de/company_dim.csv',
     AUTO_DETECT=true,
     HEADER=true);
 
-Select '=== Loading skill_dim Table ===';
+Select '=== Loading skill_dim Table ===' AS info;
 
 INSERT INTO skills_dim (skill_id, skills, type)
 SELECT skill_id, skills, type
@@ -19,7 +19,7 @@ FROM read_csv('https://storage.googleapis.com/sql_de/skills_dim.csv',
 WHERE skills IS NOT NULL;
 
 -- Load fact table second (FK references company_dim - must load after dimensions)
-Select '=== Loading job_postings_fact Table ===';
+Select '=== Loading job_postings_fact Table ===' AS info;
 
 INSERT INTO job_postings_fact (
     job_id, company_id, job_title_short, job_title, job_location, 
@@ -37,7 +37,7 @@ FROM read_csv('https://storage.googleapis.com/sql_de/job_postings_fact.csv',
     HEADER=true);
 
 -- Load bridge table last (FKs reference skills_dim and job_postings_fact)
-Select '=== Loading skills_job_dim Table ===';
+Select '=== Loading skills_job_dim Table ===' AS info;
 
 INSERT INTO skills_job_dim (skill_id, job_id)
 SELECT skill_id, job_id
