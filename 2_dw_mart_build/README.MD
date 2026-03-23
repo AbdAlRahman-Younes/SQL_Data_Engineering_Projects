@@ -104,7 +104,7 @@ Priority role tracking with incremental updates using MERGE operations.
 
 - **SQL Files:**
   - [`05_create_priority_mart.sql`](./05_create_priority_mart.sql) – Initial build of priority roles and jobs snapshot.
-  - [`06_update_priority_mart.sql`](./06_update_priority_mart.sql) – **Incremental update using MERGE** (upsert pattern)
+  - [`06_update_priority_mart.sql`](./06_update_priority_mart.sql) – **Incremental update using MERGE** (upsert pattern).
 - **Purpose:** Track priority roles and job snapshots with incremental update capabilities.
 - **Grain:** One row per job posting with priority level assignment.
 - **Key Features:** **MERGE operations for incremental updates** - demonstrates production-ready upsert patterns (INSERT, UPDATE, DELETE in single statement).
