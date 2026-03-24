@@ -11,7 +11,7 @@ An end-to-end data engineering pipeline that transforms raw CSV files from Googl
 - ✅ **Pipeline scope:** Built a complete **ETL pipeline** from raw CSVs to star schema warehouse to analytical marts.
 - ✅ **Data modeling:** Designed a **star schema** with fact tables, dimensions, and bridge tables for many-to-many relationships.
 - ✅ **ETL development:** Implemented **extract, transform, load** processes with idempotent operations and data quality checks.
-- ✅ **Mart architecture:** Created **specialized data marts** (flat, skills, priority) with additive measures and incremental update .
+- ✅ **Mart architecture:** Created **specialized data marts** (flat, skills, priority) with additive measures and incremental update.
 
 ---
 
