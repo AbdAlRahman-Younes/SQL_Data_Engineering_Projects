@@ -45,7 +45,7 @@ Raw job posting data arrives as flat CSV files in Google Cloud Storage—not str
 
 ```text
 2_WH_Mart_Build/
-├── 00_build_dw_marts.sql          # Master execution script
+├── 00_build_dw_marts.sql          # Master build script
 ├── 01_create_tables_dw.sql        # Star schema DDL
 ├── 02_load_schema_dw.sql          # GCS data extraction & loading
 ├── 03_create_flat_mart.sql        # Denormalized flat mart
