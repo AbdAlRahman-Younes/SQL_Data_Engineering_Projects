@@ -34,7 +34,7 @@ Raw job posting data arrives as flat CSV files in Google Cloud Storage—not str
 - 🐤 **Database:** DuckDB (file-based OLAP database with GCS integration via `httpfs`).
 - 🧮 **Language:** SQL (DDL for schema design, DML for data loading and transformation).
 - 📊 **Data Model:** Star schema (fact + dimension + bridge tables).
-- 🛠️ **Development:** VS Codium w/WSL for SQL editing + Bash terminal for DuckDB CLI execution.
+- 🛠️ **Development:** VS Codium in WSL for SQL editing + Bash terminal for DuckDB CLI execution.
 - 🔧 **Automation:** Master SQL script for pipeline orchestration.
 - 📦 **Version Control:** Git/GitHub for versioned pipeline scripts.
 - ☁️ **Storage:** Google Cloud Storage for source CSV files.
@@ -45,6 +45,7 @@ Raw job posting data arrives as flat CSV files in Google Cloud Storage—not str
 
 ```text
 2_WH_Mart_Build/
+├── 00_build_dw_marts.sql          # Master execution script
 ├── 01_create_tables_dw.sql        # Star schema DDL
 ├── 02_load_schema_dw.sql          # GCS data extraction & loading
 ├── 03_create_flat_mart.sql        # Denormalized flat mart
@@ -91,10 +92,10 @@ Time-series skill demand analysis with additive measures.
 
 ![Skills Mart Schema](../images/dw_Skills_Mart.png)
 
-- **SQL File:** [`04_create_skills_mart.sql`](./04_create_skills_mart.sql) – Builds time-series skill demand mart
-- **Purpose:** Time-series analysis of skill demand over time with additive measures
-- **Grain:** `skill_id + month_start_date + job_title_short`
-- **Key Features:** All measures are additive (counts/sums) for safe re-aggregation
+- **SQL File:** [`04_create_skills_mart.sql`](./04_create_skills_mart.sql) – Builds time-series skill demand mart.
+- **Purpose:** Time-series analysis of skill demand over time with additive measures.
+- **Grain:** `skill_id + month_start_date + job_title_short`.
+- **Key Features:** All measures are additive (counts/sums) for safe re-aggregation.
 
 ### Priority Mart
 
@@ -119,7 +120,7 @@ Priority role tracking with incremental updates using MERGE operations.
 - **Transform:** Data normalization, type conversion (`CAST`, `DATE_TRUNC`), and quality filtering.
 - **Load:** Idempotent table creation with (`DROP TABLE IF EXISTS` , `CREATE OR REPLACE`) patterns.
 - **Incremental Updates:** MERGE operations for upsert patterns (INSERT, UPDATE, DELETE in single statement).
-- **Orchestration:** Master SQL script (`build_dw_marts.sql`) for automated pipeline execution.
+- **Orchestration:** Master SQL script (`00_build_dw_marts.sql`) for automated pipeline execution.
 
 ### Dimensional Modeling
 
@@ -141,6 +142,6 @@ Priority role tracking with incremental updates using MERGE operations.
 
 - **Idempotency:** All scripts safely rerunnable without side effects. 
 - **Data Validation:** Verification queries at each pipeline step to ensure data integrity. 
-- **Type Safety:** Proper data type definitions (`VARCHAR`, `INTEGER`, `DOUBLE`, `BOOLEAN`, `TIMESTAMP`)  
+- **Type Safety:** Proper data type definitions (`VARCHAR`, `INTEGER`, `DOUBLE`, `BOOLEAN`, `TIMESTAMP`).
 - **Schema Organization:** Separate schemas (`flat_mart`, `skills_mart`, `priority_mart`) for logical separation.
 - **Error Handling:** Structured script execution with clear error messages and progress reporting.
